@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="260.0" spacing="5.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.vorobev.paint.gui.PolygonWindowController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Ширина">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="widthSlider">
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="widthTextField" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Радиус">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="radiusSlider">
+               <HBox.margin>
+                  <Insets left="27.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="radiusTextField" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Вершин">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="pointsSlider">
+               <HBox.margin>
+                  <Insets left="22.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="pointsTextField" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Угол">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="angleSlider">
+               <HBox.margin>
+                  <Insets left="41.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="angleTextField" prefHeight="25.0" prefWidth="40.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#onSelectBtnClick" prefHeight="30.0" prefWidth="100.0" text="Select">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onCancelBtnClick" prefHeight="30.0" prefWidth="100.0" text="Cancel">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

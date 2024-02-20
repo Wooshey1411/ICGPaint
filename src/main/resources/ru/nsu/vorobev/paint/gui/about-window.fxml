@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" style="-fx-background-color: FF8000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #4c27c4;">
+         <children>
+            <Label text="Paint2D">
+               <font>
+                  <Font name="Gunplay" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Label text="Приложение для рисования на холсте линий, разных фигур с помощью различных инструментов" wrapText="true">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Написано студентом великого факультета ФИТ в рамках курса ИНиКГ" wrapText="true">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Воробьевым Андреем." wrapText="true">
+         <font>
+            <Font name="Jokerman" size="15.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>

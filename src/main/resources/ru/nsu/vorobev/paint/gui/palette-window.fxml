@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="400.0" spacing="5.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.vorobev.paint.gui.PaletteWindowController">
+   <children>
+      <HBox minHeight="-Infinity" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Red">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="redSlider" blockIncrement="1.0" max="255.0" prefHeight="20.0" prefWidth="255.0">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="redTextField" alignment="CENTER" prefHeight="10.0" prefWidth="40.0" text="0" />
+         </children>
+         <VBox.margin>
+            <Insets left="2.0" right="2.0" top="2.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox minHeight="-Infinity" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Green">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="greenSlider" blockIncrement="1.0" max="255.0" prefHeight="20.0" prefWidth="255.0">
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="greenTextField" alignment="CENTER" prefHeight="10.0" prefWidth="40.0" text="0" />
+            <Canvas fx:id="colorCanvas" height="30.0" width="30.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Canvas>
+         </children>
+         <VBox.margin>
+            <Insets left="2.0" right="2.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox minHeight="-Infinity" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="Blue">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="blueSlider" blockIncrement="1.0" max="255.0" prefHeight="20.0" prefWidth="255.0">
+               <HBox.margin>
+                  <Insets left="29.0" top="5.0" />
+               </HBox.margin>
+            </Slider>
+            <TextField fx:id="blueTextField" alignment="CENTER" prefHeight="10.0" prefWidth="40.0" text="0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="selectBtn" mnemonicParsing="false" onMouseClicked="#onSelectBtnClick" prefHeight="25.0" prefWidth="110.0" text="Select">
+               <HBox.margin>
+                  <Insets left="65.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" onMouseClicked="#onCancelBtnClick" prefHeight="25.0" prefWidth="110.0" text="Cancel">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.nsu.vorobev.paint.gui.MainWindowController">
+   <children>
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="640.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuOpenFile" mnemonicParsing="false" text="Open" />
+                        <MenuItem fx:id="menuSaveFile" mnemonicParsing="false" text="Save As" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tools">
+                     <items>
+                        <RadioMenuItem fx:id="radioLineDrawBtn" mnemonicParsing="false" text="Line" />
+                        <RadioMenuItem fx:id="radioFillDrawBtn" mnemonicParsing="false" text="Fill" />
+                        <RadioMenuItem fx:id="radioPolygonDrawBtn" mnemonicParsing="false" text="Polygon" />
+                        <RadioMenuItem fx:id="radioStarDrawBtn" mnemonicParsing="false" text="Star" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="35.0" prefWidth="640.0" spacing="15.0" style="-fx-background-color: #D3d3d3;">
+               <children>
+                  <Button fx:id="openFileBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="optionsBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="0.0" spacing="5.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <ToggleButton fx:id="lineDrawBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;" />
+                        <ToggleButton fx:id="fillDrawBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;" />
+                        <ToggleButton fx:id="polygonDrawBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;" />
+                        <ToggleButton fx:id="starDrawBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-border-color: #000000; -fx-background-insets: 0;" textFill="#c42020">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <Button fx:id="chooseColorBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onPaletteBtnClick" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="0.0" spacing="1.0" style="-fx-border-width: 1; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="4.0" top="4.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBlackBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #000000;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onRedBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #FF0000;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onYellowBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #FFFF00;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onGreenBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #00FF00;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onCyanBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #00FFFF;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBlueBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #0000FF;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onMagentaBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #FF00FF;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onWhiteBtnClick" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #FFFFFF;" text="Button">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="2.0" top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="clearBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onCleanBtnClick" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="infoBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-insets: 0; -fx-border-color: #000000;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ScrollPane fx:id="mainScrollPane" prefHeight="420.0" prefWidth="640.0" style="-fx-background-color: #ADD8E6; -fx-background: #ADD8E6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <StackPane fx:id="canvasHolder" prefHeight="410.0" prefWidth="630.0" style="-fx-background-color: #FFFFFF;" />
+         </content>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding></ScrollPane>
+   </children>
+</AnchorPane>
